@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>"/index.js"</script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="quizContainer">
+    <div class="questionContainer">
+        <h1 id="displayQuestion"></h1>
+    </div>
+    <div class="optionsContainer">
+        <div class="modalContainer" id="optionModal">
+
+            <div class="modalContentContainer">
+                <h1>Please Pick An Option</h1>
+    
+                  <div class="modal-button-container">
+                     <button onclick="closeOptionModal()">Continue</button>
+                 </div>
+    
+             </div>
+    </div>
+
+        <span>
+            <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
+            <label for="option-one" class="option" id="option-one-label"></label>
+        </span>
+
+
+        <span>
+            <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
+            <label for="option-two" class="option" id="option-two-label"></label>
+        </span>
+
+
+        <span>
+            <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
+            <label for="option-three" class="option" id="option-three-label"></label>
+        </span>
+
+
+        <span>
+            <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
+            <label for="option-four" class="option" id="option-four-label"></label>
+        </span>
+
+
+    </div>
+
+    <div class="next-button-container">
+        <button onclick="handleNextQuestion()">Next Question</button>
+    </div>
+
+</div>
+</body>
+</html>
