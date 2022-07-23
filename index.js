@@ -1,242 +1,232 @@
-const horrorQuestion = [
+Main()
+const question = [
     {
-        question: "",
+        question1: "In The Matrix, does Neo take the blue pill or the red pill?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Green",
+            b: "Red",
+            c: "Yellow",
+            d: "Blue",
         },
-        correctAnswer: ""
+        correctAnswer: "b"
     },
 
     {
-        question: "",
+        question2: "On the first Friday the 13th film, how many people does Jason murder?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "3",
+            b: "5",
+            c: "4",
+            d: "None",
         },
-        correctAnswer: ""
+        correctAnswer: "b"
     },
 
     {
-        question: "",
+        question3: "Which horror film`s tagline is “We dare you to say his name five times“?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Slender Man",
+            b: "A Nightmare on Elm Street",
+            c: "The Ring",
+            d: "Candyman",
         },
-        correctAnswer: ""
+        correctAnswer: "d"
     },
 
     {
-        question: "",
+        question4: "What Is The Exorcist`s Demon`s Name?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Aamon",
+            b: "Loki",
+            c: "Natsu",
+            d: "Pazuzu",
         },
-        correctAnswer: ""
+        correctAnswer: "d"
     },
 
     {
-        question: "",
+        question5: "What arms does Leatherface prefer?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Chainsaw",
+            b: "Axe",
+            c: "Knives",
+            d: "Guns",
         },
-        correctAnswer: ""
+        correctAnswer: "a"
     },
 
     {
-        question: "",
+        question6: "What was Jason`s original name on Friday the 13th?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Jeff",
+            b: "Damon",
+            c: "David",
+            d: "Josh",
         },
-        correctAnswer: ""
+        correctAnswer: "d"
     },
     {
-        question: "",
+        question7: "What television series is based on a concept for an unproduced episode of The X-Files?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Final Destination",
+            b: "Awake",
+            c: "Invasion",
+            d: "UFO",
         },
-        correctAnswer: ""
+        correctAnswer: "a"
     },
 
     {
-        question: "",
+        question8: "What horror film used the following tagline? “In space, no one can hear you scream.”",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "The Cloverfield Paradox",
+            b: "Life",
+            c: "Alien",
+            d: "Color Out Of SPace",
         },
-        correctAnswer: ""
+        correctAnswer: "c"
     },
 
     {
-        question: "",
+        question9: "In which film did Annabelle the doll make her debut?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Conjuring",
+            b: "Annabelle",
+            c: "Annabelle Comes Home",
+            d: "The Nun",
         },
-        correctAnswer: ""
+        correctAnswer: "a"
     },
 
     {
-        question: "",
+        question10: "In the original A Nightmare on Elm Street, what is Nancy`s address?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "1321 Elm Street",
+            b: "1288 Elm Street",
+            c: "1428 Elm Street",
+            d: "1531 Elm Street",
         },
-        correctAnswer: ""
+        correctAnswer: "c"
     },
 
     {
-        question: "",
+        question11: "What is the actual name of “Chucky” in Child`s Play?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Charles Levi Ray",
+            b: "Charles Lee Ray",
+            c: "Charles Louis Ray",
+            d: "Charles Liam Ray",
         },
-        correctAnswer: ""
+        correctAnswer: "b"
     },
 
     {
-        question: "",
+        question12: "What heinous beast was the subject of 2007`s `Rogue`?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Crocodile",
+            b: "Gorilla",
+            c: "Anaconda",
+            d: "Bear",
         },
-        correctAnswer: ""
+        correctAnswer: "a"
     },
 
     {
-        question: "",
+        question13: "What iconic horror film was dubbed The Babysitter Murders at one point?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Rosemary`s Baby",
+            b: "Chid`s Play",
+            c: "Friday, The 13th",
+            d: "Halloween",
         },
-        correctAnswer: ""
+        correctAnswer: "d"
     },
 
     {
-        question: "",
+        question14: "In which horror film does the phrase “the power of Christ compels you.” appear?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Drag me to Hell",
+            b: "The Exorcist",
+            c: "The Conjuring",
+            d: "The Nun",
         },
-        correctAnswer: ""
+        correctAnswer: "b"
     },
 
     {
-        question: "",
+        question15: "What was Jason`s original name on Friday the 13th?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Jeremiah",
+            b: "Josh",
+            c: "Joe",
+            d: "Jeff",
         },
-        correctAnswer: ""
+        correctAnswer: "b"
     },
 
     {
-        question: "",
+        question16: "Which horror film franchise is the longest-running?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Friday the 13th",
+            b: "I Know What You Did Last Summer",
+            c: "Halloween",
+            d: "Final Destination",
         },
-        correctAnswer: ""
+        correctAnswer: "a"
     },
 
     {
-        question: "",
+        question17: "What was the twentieth century`s first American horror film?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Frankenstein",
+            b: "Horror of Dracula",
+            c: "Tarantula",
+            d: "Freaks",
         },
-        correctAnswer: ""
+        correctAnswer: "a"
     },
 
     {
-        question: "",
+        question18: "What color is Freddy Krueger's iconic sweater?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Red and Green",
+            b: "Red and Black",
+            c: "RRed and Yellow",
+            d: "Red and White",
         },
-        correctAnswer: ""
+        correctAnswer: "b"
     },
 
     {
-        question: "",
+        question19: "'The Texas Chainsaw Massacre' franchise encompasses how many different movies?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "3",
+            b: "5",
+            c: "7",
+            d: "9",
         },
-        correctAnswer: ""
+        correctAnswer: "d"
     },
 
     {
-        question: "",
+        question20: " “Do you like scary movies?” is a quote made famous by which of the following films?",
         answers: {
-            a: "",
-            b: "",
-            c: "",
+            a: "Psycho",
+            b: "Scream",
+            c: "The Shining",
+            d: "Halloween",
         },
-        correctAnswer: ""
+        correctAnswer: "b"
     },
 
-    {
-        question: "",
-        answers: {
-            a: "",
-            b: "",
-            c: "",
-        },
-        correctAnswer: ""
-    },
-
-    {
-        question: "",
-        answers: {
-            a: "",
-            b: "",
-            c: "",
-        },
-        correctAnswer: ""
-    },
-
-    {
-        question: "",
-        answers: {
-            a: "",
-            b: "",
-            c: "",
-        },
-        correctAnswer: ""
-    },
-
-    {
-        question: "",
-        answers: {
-            a: "",
-            b: "",
-            c: "",
-        },
-        correctAnswer: ""
-    },
 
 ]
+let counter = 0;
+let display = document.querySelector('h1');
+display.innerText = question[counter]
+let btn = document.getElementById('next');
 
+btn.addEventListener('click', ()=>{
+    counter++;
+    display.innerText = question[counter]
+ })
