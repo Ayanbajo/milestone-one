@@ -5,30 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>"/index.js"</script>
     <link rel="stylesheet" href="index.css">
     
 </head>
 <body>
+    <embed name = "weird" src="/assets/tiptoe-through-the-tulips-1968.mp3" loop= "true" hidden = "true" autostart="true">
     <div id="gameContainer">
     <fieldset>
-        <legend>Movie Trivia</legend>
-        <h1 id = "question"></h1>
-        <div id="option container">
+        <div id = question-container>
+        <legend></legend>
+        <h1 id="question"></h1>
+        </div>
+        <div id="option-container">
         <div>
-            <input type="radio" id="optionOne" name="option" value="a"> 
+            <input type="radio" id="optionOne" name="option" class = "answer" value="a"> 
             <label for="optionOne"></label>
         </div>
         <div>
-            <input type="radio" id="optionTwo" name="option" value="b"> 
+            <input type="radio" id="optionTwo" name="option" class = "answer" value="b"> 
             <label for="optionTwo"></label>
         </div>
         <div>
-            <input type="radio" id="optionThree" name="option" value="c"> 
+            <input type="radio" id="optionThree" name="option" class = "answer" value="c"> 
             <label for="optionThree"></label>
         </div>
         <div>
-            <input type="radio" id="optionFour" name="option" value="d"> 
+            <input type="radio" id="optionFour" name="option"class = "answer" value="d"> 
             <label for="optionFour"></label>
         </div>
     </div>
@@ -39,7 +41,7 @@
     </div>
     </div>
     </fieldset>
-
+    <script src="index.js"></script>
 </body>
 </html>
 

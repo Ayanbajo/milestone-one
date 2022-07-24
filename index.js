@@ -1,232 +1,183 @@
-Main()
+const startButton = document.getElementById('startButton');
+const nextQuestionButton = document.getElementById('next');
+const questionContainerElement = document.getElementById('question-container');
+const questionElement = document.getElementById('question');
+
 const question = [
     {
-        question1: "In The Matrix, does Neo take the blue pill or the red pill?",
-        answers: {
-            a: "Green",
-            b: "Red",
-            c: "Yellow",
-            d: "Blue",
-        },
+        question: "In The Matrix, What color of pill did Neo take?",
+        answers: [ 'Green', 'Red', 'Yellow', 'Blue' ],
         correctAnswer: "b"
     },
 
     {
-        question2: "On the first Friday the 13th film, how many people does Jason murder?",
-        answers: {
-            a: "3",
-            b: "5",
-            c: "4",
-            d: "None",
-        },
+        question: "On the first Friday the 13th film, how many people does Jason murder?",
+        answers: ['3', '5', '4', 'None'],
         correctAnswer: "b"
+        
+    },
+       
+    {
+        question: "Which horror film`s tagline is “We dare you to say his name five times“?",
+        answers: ['Slender Man', 'A Nightmare on Elm Street', 'The Ring', 'Candyman'],
+        correctAnswer: "d"
+
     },
 
     {
-        question3: "Which horror film`s tagline is “We dare you to say his name five times“?",
-        answers: {
-            a: "Slender Man",
-            b: "A Nightmare on Elm Street",
-            c: "The Ring",
-            d: "Candyman",
-        },
+        question: "What Is The Exorcist`s Demon`s Name?",
+        answers: ['Aamon', 'Loki', 'Natsu', 'Pazuzu'],
         correctAnswer: "d"
     },
+        
 
     {
-        question4: "What Is The Exorcist`s Demon`s Name?",
-        answers: {
-            a: "Aamon",
-            b: "Loki",
-            c: "Natsu",
-            d: "Pazuzu",
-        },
-        correctAnswer: "d"
-    },
-
-    {
-        question5: "What arms does Leatherface prefer?",
-        answers: {
-            a: "Chainsaw",
-            b: "Axe",
-            c: "Knives",
-            d: "Guns",
-        },
+        question: "What arms does Leatherface prefer?",
+        answers: ['Chainsaw', 'Axe', 'Knives', 'Guns'],
         correctAnswer: "a"
     },
+        
 
     {
-        question6: "What was Jason`s original name on Friday the 13th?",
-        answers: {
-            a: "Jeff",
-            b: "Damon",
-            c: "David",
-            d: "Josh",
-        },
+        question: "What was Jason`s original name on Friday the 13th?",
+        answers: ['Jeff', 'Damon', 'David', 'Josh'],
         correctAnswer: "d"
     },
+        
     {
-        question7: "What television series is based on a concept for an unproduced episode of The X-Files?",
-        answers: {
-            a: "Final Destination",
-            b: "Awake",
-            c: "Invasion",
-            d: "UFO",
-        },
+        question: "What TV series is based on a concept for an unproduced episode of The X-Files?",
+        answers: ['Final Destination', 'Awake', 'Invasion', 'UFO'],
         correctAnswer: "a"
     },
+        
 
     {
-        question8: "What horror film used the following tagline? “In space, no one can hear you scream.”",
-        answers: {
-            a: "The Cloverfield Paradox",
-            b: "Life",
-            c: "Alien",
-            d: "Color Out Of SPace",
-        },
+        question: "What horror film used the following tagline? “In space, no one can hear you scream.”",
+        answers: ['The Cloverfield Paradx', 'Life', 'Alien', 'Color Out of Space'],
         correctAnswer: "c"
     },
+        
 
     {
-        question9: "In which film did Annabelle the doll make her debut?",
-        answers: {
-            a: "Conjuring",
-            b: "Annabelle",
-            c: "Annabelle Comes Home",
-            d: "The Nun",
-        },
+        question: "In which film did Annabelle the doll make her debut?",
+        answers: ['Conjuring', 'Annabelle', 'Annabelle Come Home', 'The Nun'],
         correctAnswer: "a"
     },
+        
 
     {
-        question10: "In the original A Nightmare on Elm Street, what is Nancy`s address?",
-        answers: {
-            a: "1321 Elm Street",
-            b: "1288 Elm Street",
-            c: "1428 Elm Street",
-            d: "1531 Elm Street",
-        },
+        question: "In the original A Nightmare on Elm Street, what is Nancy`s address?",
+        answers: ['1321 Elm Street', '1288 Elm Street', '1428 Elm Street', '1531 Elm Street'],
         correctAnswer: "c"
     },
+        
 
     {
-        question11: "What is the actual name of “Chucky” in Child`s Play?",
-        answers: {
-            a: "Charles Levi Ray",
-            b: "Charles Lee Ray",
-            c: "Charles Louis Ray",
-            d: "Charles Liam Ray",
-        },
+        question: "What is the actual name of “Chucky” in Child`s Play?",
+        answers: ['Charles Levi Ray', 'Charles Lee Ray', 'Charles Louis Ray', 'Charles Liam Ray'],
         correctAnswer: "b"
     },
+        
 
     {
-        question12: "What heinous beast was the subject of 2007`s `Rogue`?",
-        answers: {
-            a: "Crocodile",
-            b: "Gorilla",
-            c: "Anaconda",
-            d: "Bear",
-        },
+        question: "What heinous beast was the subject of 2007`s `Rogue`?",
+        answers: ['Crocodile', 'Gorilla', 'Anaconda', 'Bear'],
         correctAnswer: "a"
     },
+        
 
     {
-        question13: "What iconic horror film was dubbed The Babysitter Murders at one point?",
-        answers: {
-            a: "Rosemary`s Baby",
-            b: "Chid`s Play",
-            c: "Friday, The 13th",
-            d: "Halloween",
-        },
+        question: "What iconic horror film was dubbed The Babysitter Murders at one point?",
+        answers: ['Rosemary`s Baby', 'Chid`s Play', 'Friday, The 13th', 'Halloween'],
         correctAnswer: "d"
     },
+        
 
     {
-        question14: "In which horror film does the phrase “the power of Christ compels you.” appear?",
-        answers: {
-            a: "Drag me to Hell",
-            b: "The Exorcist",
-            c: "The Conjuring",
-            d: "The Nun",
-        },
+        question: "In which horror film does the phrase “the power of Christ compels you.” appear?",
+        answers: ['Drag me to Hell', 'The Exorcist', 'The Conjuring', 'The Nun'],
         correctAnswer: "b"
     },
 
     {
-        question15: "What was Jason`s original name on Friday the 13th?",
-        answers: {
-            a: "Jeremiah",
-            b: "Josh",
-            c: "Joe",
-            d: "Jeff",
-        },
+        question: "What was Jason`s original name on Friday the 13th?",
+        answers: ['Jeremiah', 'Josh', 'Joe', 'Jeff'],
         correctAnswer: "b"
     },
+        
 
     {
-        question16: "Which horror film franchise is the longest-running?",
-        answers: {
-            a: "Friday the 13th",
-            b: "I Know What You Did Last Summer",
-            c: "Halloween",
-            d: "Final Destination",
-        },
+        question: "Which horror film franchise is the longest-running?",
+        answers: ['Friday the 13th', 'I Know What You Did Last Summer', 'Halloween', 'Final Destination'],
         correctAnswer: "a"
     },
+        
 
     {
-        question17: "What was the twentieth century`s first American horror film?",
-        answers: {
-            a: "Frankenstein",
-            b: "Horror of Dracula",
-            c: "Tarantula",
-            d: "Freaks",
-        },
+        question: "What was the twentieth century`s first American horror film?",
+        answers: ['Frankenstein', 'Horror of Dracula', 'Tarantula', 'Freaks'],
         correctAnswer: "a"
     },
+        
 
     {
-        question18: "What color is Freddy Krueger's iconic sweater?",
-        answers: {
-            a: "Red and Green",
-            b: "Red and Black",
-            c: "RRed and Yellow",
-            d: "Red and White",
-        },
+        question: "What color is Freddy Krueger's iconic sweater?",
+        answers: ['Red and Green', 'Red and Black', 'Red and Yellow', 'Red and White'],
         correctAnswer: "b"
     },
+        
 
     {
-        question19: "'The Texas Chainsaw Massacre' franchise encompasses how many different movies?",
-        answers: {
-            a: "3",
-            b: "5",
-            c: "7",
-            d: "9",
-        },
+        question: "'The Texas Chainsaw Massacre' franchise encompasses how many different movies?",
+        answers: ['3', '5', '7', '9'],
         correctAnswer: "d"
     },
+        
 
     {
-        question20: " “Do you like scary movies?” is a quote made famous by which of the following films?",
-        answers: {
-            a: "Psycho",
-            b: "Scream",
-            c: "The Shining",
-            d: "Halloween",
-        },
+        question: " “Do you like scary movies?” is a quote made famous by which of the following films?",
+        answers: ['Psycho', 'Scream', 'The Shining', 'Halloween'],
         correctAnswer: "b"
     },
-
 
 ]
-let counter = 0;
-let display = document.querySelector('h1');
-display.innerText = question[counter]
-let btn = document.getElementById('next');
 
+let counter = 0;
+let currentQuestion = question[counter];
+let display = document.getElementById('question');
+
+function displayQuestion() {
+    console.log(display)
+
+    display.innerText = currentQuestion.question;
+    console.log(optionContainer.children);
+    for (let i = 0; i < optionContainer.children.length; i++) {
+        optionContainer.children[i].children[1].textContent = question[counter].answers[i]
+    }
+} 
+let optionContainer = document.getElementById('option-container');
+
+
+let btn = document.getElementById('next');
 btn.addEventListener('click', ()=>{
     counter++;
-    display.innerText = question[counter]
+    currentQuestion = question[counter]
+    // display.innerText = question[counter]
+    console.log(currentQuestion.question)
+    displayQuestion()
  })
+//  question[0]
+displayQuestion()
+
+let index = 0
+let score = 0
+function getanswer() {
+    let ans = undefined;
+    
+    all_answer.forEach((el) => {
+        if (el.checked) {
+            ans = el.id
+        }
+    });
+    return ans
+}

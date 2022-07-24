@@ -1,65 +1,105 @@
-body {
-    background-color: lightblue;
-  }
-  .quizContainer{
-    width: 40rem;
-    height: 30rem;
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 30
-  }
-  .questionContainer{
-    width: 80%;
-    height: 8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid darkgray;
-    border-radius: 25px;
+body{
+    background-image: url("./assets/tumblr_nogt7zvhkW1swlz57o1_500.webp");
+    background-size: 90em;
+    color: darkred;
+    font-family: 'Comic Sans MS';
+    font-size: 20px;
 }
-
-.questionContainer h1{
-    font-size: 1.1rem;
+#question{
+    font-size:;
+}
+#option-container{
+    font-size: 1em;
+}
+legend {
+    width: 40px;
+    padding: 0px;
+    margin-left: calc(50% - 35px - 8px);
+    
+    
+}
+fieldset {
+    border: 1vh double black;
+    padding-bottom: 3%;
+    padding-left: 5%;
+    border-radius: 10% / 50%;
+    
+}
+#heading{
+    color: darkred;
+    text-shadow:
+    4px 4px 1px #300000,
+    4px 6px 1px #400000,
+    4px 8px 1px #500000,
+    4px 10px 1px #600000,
+    4px 12px 1px #700000,
+    4px 14px 1px #800000,
+    4px 16px 1px #900000,
+    4px 18px 1px #A00000,
+    4px 20px 1px #B00000,
+    4px 22px 1px #C00000,
+    4px 24px 1px #D00000,
+    4px 26px 1px #E00000,
+    4px 28px 1px #F00000,
+    4px 30px 1px #FA0000,
+    4px 32px 1px #FB0000,
+    4px 34px 1px #FC0000,
+    4px 36px 1px #FD0000,
+    4px 38px 1px #FE0000,
+    4px 40px 2px #FF0000;
     text-align: center;
-    padding: 3px;
+    font-size: 8em;
+      
+}
+ #startButton {
+    color: black;
+    width: 7em;
+    display: center;
+    padding: 15px 25px;
+    text-align: center;
+    background-color: darkred;
+    border: none;
+    border-radius: 10px 100px / 120px;
+    box-shadow: 0 10px black;
+    font-size: 80px;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: 'Comic Sans MS';
+    
 }
 
-.optionsContainer{
-    width: 80%;
-    height: 12rem;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-}
-.optionsContainer span{
-    width: 45%;
-    height: 3rem;
-    border: 2px solid darkgray;
-    border-radius: 20px;
-    overflow: hidden;
+a:link{
+    text-decoration: none;  
 }
 
-.next-button-container{
-    width: 50%;
-    height: 3rem;
-    display: flex;
-    justify-content: center;
+
+#startButton:hover{
+  background-color: black;
+  color: red;
+  box-shadow: 0 10px darkred;
+ 
 }
-.next-button-container button{
-    width: 8rem;
-    height: 2rem;
-    border-radius: 10px;
-    background: none;
-    color: rgb(25, 25, 25);
-    font-weight: 600;
-    border: 2px solid gray;
-    cursor: pointer;
-    outline: none;
+
+#next{
+    background-color: darkred;
+    height: 3em;
+    font-size: 15px;
+    border-radius: 15px;
+    width: 10em;
+    font-family: 'Comic Sans MS';
+    font-weight: bold;
 }
-.next-button-container button:hover{
-    background-color: rgb(143, 93, 93);
-}
+
+#next:hover{
+    background-color: black;
+    color: darkred
+    
+
+ }
+
+ outline: none;
+ margin: 0;
+ text-decoration: none;
