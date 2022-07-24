@@ -5,9 +5,9 @@ body{
     font-family: 'Comic Sans MS';
     font-size: 20px;
 }
-#question{
-    font-size:;
-}
+/* #question{
+    /* font-size:; 
+} */
 #option-container{
     font-size: 1em;
 }
@@ -43,6 +43,6 @@ fieldset {
 
  }
 
- outline: none;
+ /* outline: none;
  margin: 0;
- text-decoration: none;
+ text-decoration: none; */
