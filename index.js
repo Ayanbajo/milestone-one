@@ -1,19 +1,20 @@
 const startButton = document.getElementById('startButton');
 const nextQuestionButton = document.getElementById('next');
 const questionContainerElement = document.getElementById('question-container');
-const questionElement = document.getElementById('question');
+const submitElement = document.getElementById('submit');
+const display = document.getElementById('question');
 
 const question = [
     {
-        question: "In The Matrix, What color of pill did Neo take?",
-        answers: [ 'Green', 'Red', 'Yellow', 'Blue' ],
+        question: "Which of the Following Character Dies First in The Ring",
+        answers: [ 'Becca', 'Katie', 'Rachel', 'Ruth' ],
         correctAnswer: "b"
     },
 
     {
         question: "On the first Friday the 13th film, how many people does Jason murder?",
         answers: ['3', '5', '4', 'None'],
-        correctAnswer: "b"
+        correctAnswer: "d"
         
     },
        
@@ -144,8 +145,10 @@ const question = [
 
 let counter = 0;
 let currentQuestion = question[counter];
-let display = document.getElementById('question');
+// let response = 
+// let score = 0
 
+//-- To display question and option
 function displayQuestion() {
     console.log(display)
 
@@ -157,6 +160,7 @@ function displayQuestion() {
 } 
 let optionContainer = document.getElementById('option-container');
 
+//Activate Next button
 
 let btn = document.getElementById('next');
 btn.addEventListener('click', ()=>{
@@ -169,15 +173,30 @@ btn.addEventListener('click', ()=>{
 //  question[0]
 displayQuestion()
 
-let index = 0
-let score = 0
-function getanswer() {
-    let ans = undefined;
+/// if (response == question.correctAnswer) { 
+//     //     score ++
+//     // }
+
+// // -- reset options
+// //optionContainer.children.checked = false
+
+// // -- To get users answeers
+// // let index = 0
+// // let score = 0
+// // function getanswer() {
+// //     let ans = undefined;
     
-    all_answer.forEach((el) => {
-        if (el.checked) {
-            ans = el.id
-        }
-    });
-    return ans
-}
+// //     all_answer.forEach((el) => {
+// //         if (el.checked) {
+// //             ans = el.id
+// //         }
+// //     });
+// //     return ans
+// // }
+
+// //--To disable submit button till all quiz questions are answered
+// // document.getElementById('submit').disabled = !cansubmit;
+
+// // --To enable submit button after all questions have been answered
+// // let submitquiz = document.getElementById("submit")
+// //         submitquiz.addEventListener("click", function() )
