@@ -173,7 +173,9 @@ btn.addEventListener('click', ()=>{
 //  question[0]
 displayQuestion()
 
-/// if (response == question.correctAnswer) { 
+
+
+// if (response == question.correctAnswer) { 
 //     //     score ++
 //     // }
 
