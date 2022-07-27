@@ -228,6 +228,3 @@ subBtn.addEventListener('click', ()=>{
     else 
         console.log ('Try Again')
 })
-
-// display.innerText = question[counter]
-// let response = question.answers
