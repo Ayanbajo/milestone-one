@@ -56,7 +56,7 @@ const question = [
 
     {
         question: "What horror film used the following tagline? “In space, no one can hear you scream.”",
-        answers: ['The Cloverfield Paradx', 'Life', 'Alien', 'Color Out of Space'],
+        answers: ['The Cloverfield Paradox', 'Life', 'Alien', 'Color Out of Space'],
         correctAnswer: 'Alien'
     },
         
@@ -148,43 +148,66 @@ const question = [
 let counter = 0;
 let currentQuestion = question[counter];
 let currentAnswer = question[counter].correctAnswer;
-console.log(currentAnswer, 'line 151');
+// console.log(currentAnswer, 'line 151');
 
 
 
-//-- To display question and option
+//-- To display questions and options
+
 function displayQuestion() {
-    console.log(display)
+    // console.log(display)
     display.innerText = currentQuestion.question;
-    console.log(optionContainer.children);
+    // console.log(optionContainer.children);
     for (let i = 0; i < optionContainer.children.length; i++) {
       optionContainer.children[i].children[1].textContent = question[counter].answers[i]
       optionContainer.children[i].addEventListener('click', event => {
           // console.log(event.target.textContent);
-          getScore(event.target.textContent);
+          collectResponse(event.target.textContent);
+
       })
     }
 } 
 
-//--Activate Next button
+
+//-- For next button
+
+let currentResponse = '';
+let response = '';
+
 let btn = document.getElementById('next');
+btn.style.visibility = "hidden";
 btn.addEventListener('click', ()=>{
+    getScore(currentResponse);
     counter++;
     currentQuestion = question[counter]
-    // display.innerText = question[counter]
-    console.log(currentQuestion.question)
+    // console.log(currentQuestion.question)
     displayQuestion()
+    btn.style.visibility = "hidden"
+    console.log(currentResponse, 'Next Button');
  })
 
 displayQuestion()
 
 
-// -- Record response
-let reponse = '';
+// -- To collect response
+
+function collectResponse(response) {
+    if(response !== '')
+    currentResponse = response
+    if(counter == 19)
+    subBtn.style.visibility = "visible";
+    else
+    btn.style.visibility = "visible"
+    // console.log('New response is', currentResponse);    
+}
+
+
+// -- To calculate score from response
+
 let score = 0;
-let response = question.answers
+
 function getScore(response) {
-    console.log(response, 'line 179')
+   // console.log(currentResponse, 'testing score')
     if (response == question[counter].correctAnswer) { 
         score ++;
         console.log(score);
@@ -192,20 +215,19 @@ function getScore(response) {
 }
 
 
+// -- Submit button
 
+let subBtn = document.getElementById('submit');
+subBtn.style.visibility = "hidden";
 
-// --To get score
-// let response = answers
-// if (response == question.correctAnswer) { 
-//        score ++
-//    }
+subBtn.addEventListener('click', ()=>{
+        getScore(currentResponse);
 
-// // -- reset options
-// //optionContainer.children.checked = false
+    if (score >= 11 )
+        console.log ('Congratulation')
+    else 
+        console.log ('Try Again')
+})
 
-// //--To disable submit button till all quiz questions are answered
-// // document.getElementById('submit').disabled = !cansubmit;
-
-// // --To enable submit button after all questions have been answered
-// // let submitquiz = document.getElementById("submit")
-// //         submitquiz.addEventListener("click", function() )
+// display.innerText = question[counter]
+// let response = question.answers

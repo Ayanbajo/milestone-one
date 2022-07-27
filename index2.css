@@ -5,9 +5,7 @@ body{
     font-family: 'Comic Sans MS';
     font-size: 20px;
 }
-/* #question{
-    /* font-size:; 
-} */
+
 #option-container{
     font-size: 1em;
 }
@@ -53,12 +51,17 @@ fieldset {
     float: right;
     margin-right: 3em;
     margin-top: 2em;
-
+    color: black;
 }
 
 #submit:hover{
     background-color: black;
     color: darkred
+}
+
+a:link{
+    text-decoration: none;  
+    color: black;
 }
 
  
