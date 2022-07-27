@@ -32,15 +32,15 @@ body{
       
 }
  #startButton {
-    color: black;
+    color: darkred;
     width: 7em;
     display: center;
     padding: 15px 25px;
     text-align: center;
-    background-color: darkred;
+    background-color: black;
     border: none;
-    border-radius: 10px 100px / 120px;
-    box-shadow: 0 10px black;
+    border-radius: 10% / 50%;
+    box-shadow: 0 10px darkred;
     font-size: 80px;
     position: absolute;
     top: 70%;
@@ -53,11 +53,12 @@ body{
 
 a:link{
     text-decoration: none;  
+    color: darkred;
 }
 
 #startButton:hover{
-  background-color: black;
-  color: red;
-  box-shadow: 0 10px darkred;
+  background-color: darkred;
+  color: black;
+  box-shadow: 0 10px black;
  
 }
