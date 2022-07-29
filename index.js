@@ -1,9 +1,11 @@
 const startButton = document.getElementById('startButton');
-const nextQuestionButton = document.getElementById('next');
+// const nextQuestionButton = document.getElementById('next');
 const questionContainerElement = document.getElementById('question-container');
-const submitElement = document.getElementById('submit');
+// const submitElement = document.getElementById('submit');
 const display = document.getElementById('question');
 const optionContainer = document.getElementById('option-container');
+const disclaimer = document.getElementById('disclaimer');
+const disclaimertwo = document.getElementById('disclaimerTwo');
 
 
 const question = [
@@ -152,6 +154,7 @@ let currentAnswer = question[counter].correctAnswer;
 
 
 
+
 //-- To display questions and options
 
 function displayQuestion() {
@@ -168,7 +171,6 @@ function displayQuestion() {
     }
 } 
 
-
 //-- For next button
 
 let currentResponse = '';
@@ -176,6 +178,7 @@ let response = '';
 
 let btn = document.getElementById('next');
 btn.style.visibility = "hidden";
+// console.log(btn);
 btn.addEventListener('click', ()=>{
     getScore(currentResponse);
     counter++;
@@ -186,8 +189,8 @@ btn.addEventListener('click', ()=>{
     console.log(currentResponse, 'Next Button');
  })
 
-displayQuestion()
 
+displayQuestion()
 
 // -- To collect response
 
@@ -223,8 +226,17 @@ subBtn.style.visibility = "hidden";
 subBtn.addEventListener('click', ()=>{
         getScore(currentResponse);
 
-    if (score >= 11 )
-        console.log ('Congratulation')
-    else 
-        console.log ('Try Again')
+    if (score >= 11 ) {
+        document.getElementById('disclaimerTwo').textContent = 'Thank You for playing. I don`t know what the hell I am doing.'
+        console.log ('Congratulation');
+    }
+    else {
+        document.getElementById('disclaimer').textContent = 'Thank You for playing. view your score below.'
+        console.log ('Try Again');
+    }
+        
+    
 })
+
+// document.getElementById('disclaimerTwo').textContent = 'Thank You for playing. I don`t know what the hell I am doing.'
+// document.getElementById('disclaimer').textContent = 'Thank You for playing. view your score below.'
