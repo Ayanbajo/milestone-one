@@ -28,37 +28,39 @@ body{
     4px 38px 1px #FE0000,
     4px 40px 2px #FF0000;
     text-align: center;
-    font-size: 8em;
-      
+    font-size: 8em;    
 }
+
  #startButton {
-    color: black;
     width: 7em;
     display: center;
     padding: 15px 25px;
     text-align: center;
-    background-color: darkred;
-    border: none;
+    background-color: darkred; 
     border-radius: 10% / 50%;
     box-shadow: 0 10px black;
     font-size: 80px;
     position: absolute;
     top: 70%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    font-family: 'Comic Sans MS';
-    
+    font-family: 'Comic Sans MS';   
 }
 
-a:link{
+a{
     text-decoration: none;  
     color: black;
+    text-shadow: 5px 5px black;
 }
 
+a:hover{
+    text-decoration: none;  
+    color: darkred;
+    text-shadow: 5px 5px darkred;
+}
 #startButton:hover{
   background-color: black;
-  color: darkred;
   box-shadow: 0 10px darkred;
- 
 }
+
+/* -ms-transform: translate(-500%, -50%); */

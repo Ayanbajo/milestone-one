@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="index2.css">
 </head>
 <body>
-    <embed name = "weird" src="/assets/tiptoe-through-the-tulips-1968.mp3" loop= "loop" hidden = "true" autostart="true">
+    <audio loop autoplay id="weird">
+        <source src="./assets/tiptoe-through-the-tulips-1968.mp3">
+    </audio>
     <div id="gameContainer">
     <fieldset>
         <div id = question-container>
@@ -37,15 +39,15 @@
             <button id ="next">Next Question</button>
             <button id ="submit">Submit</a></button>
         </div>
-        <div>
-            <h3 id = "disclaimer"></h3>
-            <h3 id = "disclaimerTwo"></h3>
-        </div>
     </div>
     </div>
     </fieldset>
+    <div>
+        <h2 id = "disclaimer"></h2>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
 
-<!-- <a href = "index3.html"></a> -->
+<!-- <audio id = "weird" src = "/assets/tiptoe-through-the-tulips-1968.mp3" loop = "loop"></audio> -->
+<!-- <embed name="weird" src="/assets/tiptoe-through-the-tulips-1968.mp3"loop="true" hidden="true" autostart="true"> -->

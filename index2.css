@@ -4,6 +4,7 @@ body{
     color: darkred;
     font-family: 'Comic Sans MS';
     font-size: 20px;
+    text-shadow: 5px 5px black;
 }
 
 #option-container{
@@ -62,4 +63,10 @@ fieldset {
 a:link{
     text-decoration: none;  
     color: black;
+}
+
+#disclaimer, #disclaimerTwo{
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 5px 5px black;
 }

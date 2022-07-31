@@ -1,7 +1,5 @@
 const startButton = document.getElementById('startButton');
-// const nextQuestionButton = document.getElementById('next');
 const questionContainerElement = document.getElementById('question-container');
-// const submitElement = document.getElementById('submit');
 const display = document.getElementById('question');
 const optionContainer = document.getElementById('option-container');
 const disclaimer = document.getElementById('disclaimer');
@@ -44,9 +42,9 @@ const question = [
         
 
     {
-        question: "What was Jason`s original name on Friday the 13th?",
-        answers: ['Jeff', 'Damon', 'David', 'Josh'],
-        correctAnswer: 'Josh'
+        question: "Which of the following is the name of the camp where 'Friday the 13th' antagonist Jason Voorhees drowns?",
+        answers: ['Camp Crytal Water', 'Camp Clear Lake', 'Camp Crystal Lake', 'Camp Clear Water'],
+        correctAnswer: 'Camp Crystal Lake'
     },
         
     {
@@ -152,9 +150,6 @@ let currentQuestion = question[counter];
 let currentAnswer = question[counter].correctAnswer;
 // console.log(currentAnswer, 'line 151');
 
-
-
-
 //-- To display questions and options
 
 function displayQuestion() {
@@ -186,7 +181,7 @@ btn.addEventListener('click', ()=>{
     // console.log(currentQuestion.question)
     displayQuestion()
     btn.style.visibility = "hidden"
-    console.log(currentResponse, 'Next Button');
+    // console.log(currentResponse, 'Next Button');
  })
 
 
@@ -213,7 +208,7 @@ function getScore(response) {
    // console.log(currentResponse, 'testing score')
     if (response == question[counter].correctAnswer) { 
         score ++;
-        console.log(score);
+        // console.log(score);
     }
 }
 
@@ -227,16 +222,18 @@ subBtn.addEventListener('click', ()=>{
         getScore(currentResponse);
 
     if (score >= 11 ) {
-        document.getElementById('disclaimerTwo').textContent = 'Thank You for playing. I don`t know what the hell I am doing.'
-        console.log ('Congratulation');
+        document.getElementById('disclaimer').textContent = `You Got ${score} Right. Congratulations!!! You Are A Horror Genius. Jason And Freddie Will Be Proud.`
+        // console.log ('congratulations');
     }
     else {
-        document.getElementById('disclaimer').textContent = 'Thank You for playing. view your score below.'
-        console.log ('Try Again');
-    }
-        
-    
+        document.getElementById('disclaimer').textContent = `You Got ${score} Right. Try Again Before Jason And Freddie Get You Tonight!!!`
+        // console.log ('Try Again');
+    }   
 })
 
 // document.getElementById('disclaimerTwo').textContent = 'Thank You for playing. I don`t know what the hell I am doing.'
 // document.getElementById('disclaimer').textContent = 'Thank You for playing. view your score below.'
+// const btn = document.getElementById('next');
+// const subBtn = document.getElementById('submit');
+// music.loop = true;
+// const music = document.getElementById('weird-music');
