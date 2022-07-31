@@ -4,7 +4,7 @@ body{
     color: darkred;
     font-family: 'Comic Sans MS';
     font-size: 20px;
-    text-shadow: 5px 5px black;
+    text-shadow: 3px 3px black;
 }
 
 #option-container{
@@ -65,8 +65,8 @@ a:link{
     color: black;
 }
 
-#disclaimer, #disclaimerTwo{
-    font-size: 2em;
+#disclaimer{
+    font-size: 3em;
     text-align: center;
     text-shadow: 5px 5px black;
 }

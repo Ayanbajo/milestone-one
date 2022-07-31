@@ -7,7 +7,7 @@ body{
 }
 #heading{
     color: darkred;
-    text-shadow:
+    text-shadow: 
     4px 4px 1px #300000,
     4px 6px 1px #400000,
     4px 8px 1px #500000,
@@ -36,9 +36,9 @@ body{
     display: center;
     padding: 15px 25px;
     text-align: center;
-    background-color: darkred; 
+    background-color: black; 
     border-radius: 10% / 50%;
-    box-shadow: 0 10px black;
+    box-shadow: 0 10px darkred;
     font-size: 80px;
     position: absolute;
     top: 70%;
@@ -46,21 +46,20 @@ body{
     transform: translate(-50%, -50%);
     font-family: 'Comic Sans MS';   
 }
+#startButton:hover{
+    background-color: darkred;
+    box-shadow: 0 10px black;
+  }
 
 a{
-    text-decoration: none;  
-    color: black;
-    text-shadow: 5px 5px black;
-}
-
-a:hover{
     text-decoration: none;  
     color: darkred;
     text-shadow: 5px 5px darkred;
 }
-#startButton:hover{
-  background-color: black;
-  box-shadow: 0 10px darkred;
+a:hover{
+    text-decoration: none;  
+    color: black;
+    text-shadow: 5px 5px black;
 }
 
 /* -ms-transform: translate(-500%, -50%); */

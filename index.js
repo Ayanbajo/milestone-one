@@ -181,7 +181,7 @@ btn.addEventListener('click', ()=>{
     // console.log(currentQuestion.question)
     displayQuestion()
     btn.style.visibility = "hidden"
-    // console.log(currentResponse, 'Next Button');
+    console.log(currentResponse, 'Next Button');
  })
 
 
@@ -208,7 +208,7 @@ function getScore(response) {
    // console.log(currentResponse, 'testing score')
     if (response == question[counter].correctAnswer) { 
         score ++;
-        // console.log(score);
+        console.log(score);
     }
 }
 
@@ -220,9 +220,8 @@ subBtn.style.visibility = "hidden";
 
 subBtn.addEventListener('click', ()=>{
         getScore(currentResponse);
-
     if (score >= 11 ) {
-        document.getElementById('disclaimer').textContent = `You Got ${score} Right. Congratulations!!! You Are A Horror Genius. Jason And Freddie Will Be Proud.`
+        document.getElementById('disclaimer').textContent = `You Got ${score} Right. Congratulations!!! You Are A Horror Genius!!!`
         // console.log ('congratulations');
     }
     else {
@@ -230,10 +229,3 @@ subBtn.addEventListener('click', ()=>{
         // console.log ('Try Again');
     }   
 })
-
-// document.getElementById('disclaimerTwo').textContent = 'Thank You for playing. I don`t know what the hell I am doing.'
-// document.getElementById('disclaimer').textContent = 'Thank You for playing. view your score below.'
-// const btn = document.getElementById('next');
-// const subBtn = document.getElementById('submit');
-// music.loop = true;
-// const music = document.getElementById('weird-music');
