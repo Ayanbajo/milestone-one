@@ -63,7 +63,7 @@ const question = [
 
     {
         question: "In which film did Annabelle the doll make her debut?",
-        answers: ['Conjuring', 'Annabelle', 'Annabelle Come Home', 'The Nun'],
+        answers: ['Conjuring', 'Annabelle', 'Annabelle Comes Home', 'The Nun'],
         correctAnswer: 'Conjuring'
     },
         
@@ -91,7 +91,7 @@ const question = [
 
     {
         question: "What iconic horror film was dubbed The Babysitter Murders at one point?",
-        answers: ['Rosemary`s Baby', 'Chid`s Play', 'Friday, The 13th', 'Halloween'],
+        answers: ['Rosemary`s Baby', 'Child`s Play', 'Friday, The 13th', 'Halloween'],
         correctAnswer: 'Halloween'
     },
         
