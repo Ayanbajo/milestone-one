@@ -1,6 +1,6 @@
 body{
     background-image: url("./assets/tumblr_mj6afda5gF1rhvtaoo1_500.webp");
-    background-size: 90em;
+    background-size: 20em;
     color: darkred;
     font-family: 'Comic Sans MS';
     font-size: 20px;
@@ -61,5 +61,3 @@ a:hover{
     color: black;
     text-shadow: 5px 5px black;
 }
-
-/* -ms-transform: translate(-500%, -50%); */
